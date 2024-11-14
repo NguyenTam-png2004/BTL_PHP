@@ -1,0 +1,281 @@
+/* Reset margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ececec;
+}
+
+.avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Đảm bảo hình ảnh không bị biến dạng */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.avatar img:hover {
+    transform: scale(1.1);
+}
+
+.profile-info {
+    margin-left: 20px;
+}
+
+.profile-info h1 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.profile-info p {
+    color: #666;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-info p img {
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+/* Progress Section */
+.progress-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.progress-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1671e7;
+}
+
+.progress-bar1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.circle-chart1 {
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    border: 8px solid #4caf50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4caf50;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.progress-bar1 img {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    /* Đảm bảo hình ảnh không bị méo */
+    margin-left: 10px;
+}
+
+/* Stats Section */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.stat-box {
+    text-align: center;
+    color: #555;
+    background-color:#F2F7FD;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.stat-box i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.stat-box p {
+    font-size: 16px;
+}
+
+/* Weekly Activity Section */
+.activity-section {
+    margin-bottom: 30px;
+}
+
+.activity-section h2 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 15px;
+}
+.progress-bar-english {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 8px;
+    margin-left: -20px;
+}
+
+
+
+.stats-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.stat-box {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    width: 100%;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.stat-box i {
+    color: #1671e7;
+}
+
+.stat-box p {
+    font-weight: 600;
+}
+
+.activity-section h2 {
+    color: #1671e7;
+    text-align: center;
+}
+
+.day.active {
+    background-color: #4caf50;
+    color: white;
+}
+/*-------------SETTINGS-------------*/
+
+.container_setting {
+    width: 80%;
+    margin: 100px auto;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tabs li {
+    margin-right: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.tabs .active-tab {
+    background-color: #3498db;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], select, button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="button"], button[type="submit"] {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.delete-btn {
+    background-color: #e74c3c;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+input[type="file"] {
+    margin: 20px 0;
+}
+.message{
+    margin-bottom:10px; 
+    border:1px solid;
+    padding:10px;
+    border-radius:5px;
+    display:none;
+}
+.message_success{
+    color:green; 
+    background-color: #dff0d8;
+    display: block;
+}
+.message_fail{
+    color:red; 
+    background-color: #f2dede;
+    display:block;
+}

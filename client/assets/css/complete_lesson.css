@@ -1,0 +1,476 @@
+/*vocal_filter*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/**/ 
+.container_complete_lesson{
+    display:flex; 
+    height: 100vh;   
+    flex-direction: column;        
+    justify-content: center;        
+    align-items: center;   
+    text-align: center;         
+    font-family: Arial;
+}
+.content_complete_lession_1{
+    line-height: 1.5em;
+    color: rgb(30, 45, 64);
+    text-align: center;
+    text-decoration: unset;
+}
+.buttons_complete_lession{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid;
+    padding: 1.5em ;
+    justify-content: space-around;
+    background-color: white;
+}
+.buttons_complete_lession a{
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+.next{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color:#418BF1;
+    color: white;
+    border: 1px solid;
+    width: 150px;
+    height: 50px;
+}
+.return{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color:aliceblue;
+    width: 150px;
+    height: 50px;
+}
+
+
+.icon_language{
+    font-size: 25px;
+}
+.icon_language img{
+    width: 400px;
+}
+.complete_1 .box{
+    border: 2px solid #DAE1EA;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.complete_1 .box p{
+    margin: 0 5px;
+}
+.exp_container_left, .exp_container_right, .Score{
+    display: flex;
+    align-items: center;
+}
+.exp_container_right, .Score{
+    margin-left: auto;
+}
+
+/*-----------HEADER--------------------------------*/
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.header_left .inline {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.header_left .inline img{
+    width: 20px;
+    height: 20px;
+    
+}
+.header_left .inline p {
+    margin-left: 0.3em;
+    font-size: 20px;
+}
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 .4375rem .5625rem -.4375rem #d6dee6;
+    z-index: 2;
+    display: inline-flex;
+    justify-content: space-between; 
+    background-color: #F3F8FE;
+    padding:20px 0;
+}
+.header_left div{
+    margin-left: 2.5em;
+}
+.header_right{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.header_right img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 2.5em;
+    cursor: pointer;
+}
+.menu{
+    display: none;
+    position: absolute; /* Để hiển thị bên dưới hình ảnh */
+    top: 100%; /* Đặt dưới cùng của div cha */
+    right: 0.5rem; /* Căn phải */
+    background-color: white; /* Màu nền của danh sách */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    list-style-type: none; /* Bỏ dấu đầu dòng */
+    padding: 0; /* Xóa padding mặc định */
+    margin: 0; /* Xóa margin mặc định */
+    z-index: 2; /* Đảm bảo nằm trên các phần tử khác */
+}
+.menu li{
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 20px;
+}
+.menu li img{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.menu li:hover{
+    background-color: #F3F8FE;
+    color: #116EEE;
+}
+.menu.show {
+    display: block; /* Hiển thị danh sách khi có lớp "show" */
+}
+
+.container_BXH{
+    width: 400px;
+    display:flex;    
+    flex-direction: column;        
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    height: 500px;
+    display: none;
+}
+.container_BXH .show {
+    display: block; /* Hiển thị danh sách khi có lớp "show" */
+}
+.league_header{
+    text-align: center;
+    border-bottom: 2px solid #DAE1EA;
+    padding: 10px 0;
+    color: white;
+    background-color: #5438DC;
+}
+.bxh {
+    width: 100%;
+    display: flex; /* Sử dụng flexbox để sắp xếp các item */
+    flex-wrap: wrap; /* Cho phép các item xuống dòng khi hết chỗ */
+    justify-content: center; /* Căn giữa các item */
+    gap: 10px; /* Khoảng cách giữa các item */
+}
+
+.account {
+    display: inline-flex;
+    width: 100%; /* Đặt chiều rộng cho từng item, trừ đi khoảng cách */
+    box-sizing: border-box; /* Đảm bảo padding và border được tính trong chiều rộng */
+    padding: 10px; /* Thêm khoảng cách bên trong */
+    padding-left: 1.5rem;
+    font-size: 22px;
+}
+
+.avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Tạo hình tròn cho avatar */
+    margin-right: 1rem;
+}
+.avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stt_top10, .name_account, .star_bxh {
+    margin-right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.star_bxh{
+    position:absolute;
+    right: 0;
+}
+.star_bxh p{
+    padding-right: 5;
+}
+.stt_top10{
+    color: #0EBE75;
+}
+.separation{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: #0EBE75;
+}
+/*****************HOMELOGIN********************/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*circle_complete*/
+a{
+    color: inherit;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+.viewport_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+.viewport_content{
+    width: 650px;
+    min-width: 400px;
+}
+.header_home_login  h1{
+    margin: 30px 0;
+}
+.header_home_login .course_current p{
+    margin: 10px 0;
+    margin-left: 10px;
+}
+.course_current{
+    display: inline-flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #DAE1EA;
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.course_current p {
+    font-size: 18px;
+    margin-left: 10px;
+}
+.list_courses {
+    position: absolute; /* Positioned absolutely relative to the course_current div */
+    top: 100%; /* Positioned right below the course_current element */
+    left: 0;
+    z-index: 1000; /* Ensures it's on top of other elements */
+    margin-top: 5px;
+    border: 1px solid #e0e4eb;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 100%; /* Same width as the course_current element */
+    display: none; /* Initially hidden */
+}
+
+.list_courses ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list_courses li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #e0e4eb;
+}
+
+.list_courses li:last-child {
+    border-bottom: none;
+}
+
+.list_courses li:hover {
+    background-color: #f0f0f0;
+}
+.rank_current{
+    font-size: 20px;
+    width: 100%;
+    border: 2px solid #DAE1EA;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #5438DC;
+    color: #fff;
+}
+.rank_current.shrink {
+    width: 180px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top:25px;
+
+}
+.body_home_login .course {
+    border: 2px solid #DAE1EA;
+    border-radius: 20px;
+    width: 100%;
+    padding-left: 20px;
+    margin: 30px 0;
+}
+.body_home_login .course .name_course{
+    font-size: 22px;
+    margin: 20px 0;
+}
+.content_course{
+    margin: 1rem 0;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.content_course:hover{
+    background-color: #F3F8FE;
+}
+.content_course .lesson{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding-left: 20px;
+}
+.circle{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle img{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+}
+.circle_complete{
+    border: 4px solid #0EBE75;
+}
+
+.progress {
+    height: 20px; /* Độ cao của thanh */
+    margin-right: 20px;
+}
+.progress-bar {
+    border-radius: 20px; /* Bo góc cho phần tiến trình */
+    position: relative;
+}
+
+.progress-bar span {
+    position: absolute;
+    right: 10px; /* Căn phần trăm về phía bên phải */
+    color: white;
+    font-weight: bold;
+}
+.circle_complete {
+    position: relative;
+}
+.checkmark img{
+    border: none;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 95%; /* Điều chỉnh vị trí dấu check */
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+.circle_unfinished{
+    border: 4px solid #DAE1EA;
+    opacity: 0.6;
+}
+.unfinished p{
+    opacity: 0.5;
+}
+.icon_unfinished img{
+    border: none;
+    padding: 0;
+    opacity: 1;
+    width: 45px;
+    height: 45px;
+}
+.circle_unfinished{
+    position: relative;
+}
+.icon_unfinished{
+    position: absolute;
+    top: 50%; /* Điều chỉnh vị trí dấu check */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.circle_current{
+    border: 4px solid #DAE1EA;
+}
+.circle_current img{
+    animation: scale 2s infinite; /* Áp dụng animation */
+}
+@keyframes scale {
+    0% { transform: scale(0.9); } /* Kích thước ban đầu */
+    90% { transform: scale(1.1); } /* Phóng to 1.5 lần */
+    100% { transform: scale(0.9); } /* Quay lại kích thước ban đầu */
+}
+
+/* Kích thước màn hình nhỏ hơn 600px */
+@media (max-width: 600px) {
+    .viewport_content{
+        width: 500px;
+        min-width: 200px;
+        margin: 0 10px;
+    }
+}
+
+/* Kích thước màn hình từ 600px đến 1200px */
+@media (min-width: 601px) and (max-width: 1200px) {
+    .responsive-text {
+        font-size: 1.2rem; /* Tăng kích thước cho màn hình vừa */
+    }
+    #next_level {
+        width: 450px;
+        height: 275px;
+    }
+}
+
+/* Kích thước màn hình lớn hơn 1200px */
+@media (min-width: 1201px) {
+    .responsive-text {
+        font-size: 1.5rem; /* Phóng to cho màn hình lớn */
+    }
+    #next_level {
+        width: 500px;
+        height: 325px;
+    }
+}
+

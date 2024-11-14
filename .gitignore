@@ -1,2 +1,3 @@
 # Bỏ qua file process.env
 process.env
+/vendor/

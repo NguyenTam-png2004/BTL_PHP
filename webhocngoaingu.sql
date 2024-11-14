@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 13, 2024 lúc 04:17 PM
+-- Thời gian đã tạo: Th10 14, 2024 lúc 03:34 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -39,36 +39,36 @@ CREATE TABLE `answers` (
 --
 
 INSERT INTO `answers` (`ID`, `ID_question`, `answer`, `is_correct`) VALUES
-(13, 4, 'A greeting', 1),
-(14, 4, 'A farewell', 0),
-(15, 4, 'A question', 0),
-(16, 4, 'An insult', 0),
-(17, 5, 'High', 1),
-(18, 5, 'Hey', 0),
-(19, 5, 'Ho', 0),
-(20, 5, 'How', 0),
-(21, 6, 'Chào buổi sáng', 1),
-(22, 6, 'Chúc ngủ ngon', 0),
-(23, 6, 'Chúc mừng năm mới', 0),
-(24, 6, 'Xin lỗi', 0),
-(25, 7, 'Good afternoon', 1),
-(26, 7, 'Good night', 0),
-(27, 7, 'Goodbye', 0),
-(28, 7, 'Good morning', 0),
-(29, 8, 'Good evening', 1),
-(30, 8, 'Good morning', 0),
-(31, 8, 'Goodbye', 0),
-(32, 8, 'Good night', 0),
-(33, 9, 'Tạm biệt', 1),
-(34, 9, 'Chúc mừng năm mới', 0),
-(35, 9, 'Chào buổi sáng', 0),
-(36, 9, 'Xin lỗi', 0),
-(37, 10, 'Tạm biệt', 1),
-(38, 10, 'Chúc mừng năm mới', 0),
-(39, 10, 'Chào buổi sáng', 0),
-(40, 10, 'Chúc ngủ ngon', 0),
-(41, 11, 'Good morning', 1),
-(42, 12, 'Goodbye', 1);
+(43, 13, 'a greeting', 1),
+(44, 13, 'a farewell', 0),
+(45, 13, 'a question', 0),
+(46, 13, 'an insult', 0),
+(47, 14, 'high', 1),
+(48, 14, 'hey', 0),
+(49, 14, 'ho', 0),
+(50, 14, 'how', 0),
+(51, 15, 'chào buổi sáng', 1),
+(52, 15, 'chúc ngủ ngon', 0),
+(53, 15, 'chúc mừng năm mới', 0),
+(54, 15, 'xin lỗi', 0),
+(55, 16, 'good afternoon', 1),
+(56, 16, 'good night', 0),
+(57, 16, 'goodbye', 0),
+(58, 16, 'good morning', 0),
+(59, 17, 'good evening', 1),
+(60, 17, 'good morning', 0),
+(61, 17, 'goodbye', 0),
+(62, 17, 'good night', 0),
+(63, 18, 'tạm biệt', 1),
+(64, 18, 'chúc mừng năm mới', 0),
+(65, 18, 'chào buổi sáng', 0),
+(66, 18, 'xin lỗi', 0),
+(67, 19, 'tạm biệt', 0),
+(68, 19, 'hẹn gặp lại', 1),
+(69, 19, 'tạm biệt', 0),
+(70, 19, 'tạm biệt', 0),
+(71, 20, 'good morning', 1),
+(72, 21, 'goodbye', 1);
 
 -- --------------------------------------------------------
 
@@ -91,7 +91,8 @@ INSERT INTO `courses` (`ID`, `ID_language`, `course`) VALUES
 (4, 1, 'Personality traits'),
 (5, 1, 'Travel'),
 (6, 1, 'Technology'),
-(7, 1, 'At work');
+(7, 1, 'At work'),
+(9, 2, 'Introductions');
 
 -- --------------------------------------------------------
 
@@ -159,7 +160,6 @@ CREATE TABLE `lessons` (
 --
 
 INSERT INTO `lessons` (`ID`, `ID_course`, `lesson`, `lesson_order`, `description`, `image`) VALUES
-(7, 3, 'Hello!', 1, 'Learn greetings for meeting people', 'hello.jpg'),
 (8, 3, 'Referring to a person', 2, 'Learn the singular pronouns \"I\" and \"you\"', 'youjpg.jpg'),
 (9, 3, 'Asking where somebody is from', 3, 'Learn how to ask which country somebody is from', 'which.jpg'),
 (10, 3, 'Identifying people in a workplace', 4, 'Learn vocabulary to talk about people in a workplace', 'workplace.jpg'),
@@ -172,7 +172,11 @@ INSERT INTO `lessons` (`ID`, `ID_course`, `lesson`, `lesson_order`, `description
 (17, 3, 'Identifying people in a workplace', 11, 'Learn vocabulary to talk about people in a workplace', 'workplace.jpg'),
 (18, 3, 'Talking about languages', 12, 'Learn vocabulary to talk about languages', 'language.jpg'),
 (19, 3, 'Discussing personal items', 13, 'Talk about essential personal items', 'items.jpg'),
-(20, 3, 'Answering and hanging up the phone', 14, 'Learn phrases to start and finish a phone conversation', 'which.jpg');
+(20, 3, 'Answering and hanging up the phone', 14, 'Learn phrases to start and finish a phone conversation', 'which.jpg'),
+(22, 4, 'Referring to a person', 1, 'Learn the singular pronouns \"I\" and \"you\"', 'youjpg.jpg'),
+(23, 4, 'Asking where somebody is from', 2, 'Learn how to ask which country somebody is from', 'which.jpg'),
+(24, 4, 'Identifying people in a workplace', 3, 'Learn vocabulary to talk about people in a workplace', 'workplace.jpg'),
+(25, 3, 'Hello!', 1, 'Learn greetings for meeting people', 'lesson.jpg');
 
 -- --------------------------------------------------------
 
@@ -193,9 +197,7 @@ CREATE TABLE `progress` (
 --
 
 INSERT INTO `progress` (`ID`, `ID_user`, `ID_course`, `percent`, `updated_at`) VALUES
-(1, 1, 1, 33, '2024-11-12 01:08:06'),
-(8, 8, 1, 33, '2024-11-13 12:21:00'),
-(9, 1, 3, 14, '2024-11-13 19:45:18');
+(9, 1, 3, 14, '2024-11-14 01:53:23');
 
 -- --------------------------------------------------------
 
@@ -215,15 +217,15 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`ID`, `ID_vocabulary`, `question`, `type`) VALUES
-(4, 129, 'What is the meaning of \"hello\"?', '2'),
-(5, 130, 'How do you pronounce \"hi\"?', '2'),
-(6, 131, 'Translate \"good morning\" to Vietnamese.', '2'),
-(7, 132, 'Choose the correct response for \"good afternoon\".', '2'),
-(8, 133, 'What is the correct pronunciation of \"good evening\"?', '2'),
-(9, 134, 'Translate \"goodbye\" to Vietnamese.', '2'),
-(10, 135, 'What does \"see you\" mean in Vietnamese?', '2'),
-(11, 131, 'Complete the sentence: \"I usually say ____ in the morning.\"', '1'),
-(12, 134, 'Complete the sentence: \"When we leave, we say ____.\"', '1');
+(13, 136, 'What is the meaning of \"hello\"?', '2'),
+(14, 137, 'How do you pronounce \"hi\"?', '2'),
+(15, 138, 'Translate \"good morning\" to Vietnamese.', '2'),
+(16, 139, 'Choose the correct response for \"good afternoon\".', '2'),
+(17, 140, 'What is the correct pronunciation of \"good evening\"?', '2'),
+(18, 141, 'Translate \"goodbye\" to Vietnamese.', '2'),
+(19, 142, 'What does \"see you\" mean in Vietnamese?', '2'),
+(20, 138, 'Complete the sentence: \"I usually say ____ in the morning.\"', '1'),
+(21, 139, 'Complete the sentence: \"When we leave, we say ____.\"', '1');
 
 -- --------------------------------------------------------
 
@@ -246,10 +248,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `username`, `email`, `password`, `avatar`, `experience`, `role`) VALUES
-(1, 'NguyenTam3', 'tam@gmail.com', '1', '', 4, 1),
+(1, 'NguyenTam3', 'tam@gmail.com', '1', 'http://localhost:8088/php03_webhocngoaingu/assets/items.jpg', 6, 1),
 (7, 'Tam Nguyen', 'nguyentampt14052004@gmail.com', 'rAhKiubBDR', 'https://lh3.googleusercontent.com/a/ACg8ocKyuW-fkxrAa1qc4GUwZbTGuMdUJdTsSs94zy_veCRc5IkqMQ=s96-c', 14, 1),
-(8, 'a', 'a@gmail.com', '1', '', 8, 1),
-(9, 'exampleUser', 'b@gmail.com', 'hashed_password', 'default_avatar.png', 0, 0);
+(9, 'exampleUser', 'b@gmail.com', 'hashed_password', 'default_avatar.png', 0, 0),
+(10, 'b', 'c@gmail.com', '1', 'http://localhost:8088/php03_webhocngoaingu/assets/image_hocngoaingu/avatar.jpg', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -269,11 +271,11 @@ CREATE TABLE `vocabstatus` (
 --
 
 INSERT INTO `vocabstatus` (`ID`, `ID_user`, `ID_vocabulary`, `status`) VALUES
-(17, 1, 129, 'weak'),
-(18, 1, 130, 'weak'),
-(19, 1, 131, 'weak'),
-(20, 1, 132, 'weak'),
-(21, 1, 133, 'weak');
+(22, 1, 136, 'strong'),
+(23, 1, 137, 'strong'),
+(24, 1, 138, 'weak'),
+(25, 1, 140, 'weak'),
+(26, 1, 139, 'weak');
 
 -- --------------------------------------------------------
 
@@ -297,13 +299,13 @@ CREATE TABLE `vocabularies` (
 --
 
 INSERT INTO `vocabularies` (`ID`, `ID_lesson`, `vocabulary`, `sound`, `image`, `description`, `meaning`, `example`) VALUES
-(129, 7, 'hello', 'dog.mp3', 'vocab.jpg', 'A common greeting used to say hi.', 'Xin chào', 'Hello! How are you?'),
-(130, 7, 'hi', 'dog.mp3', 'vocab.jpg', 'An informal greeting.', 'Chào', 'Hi! Long time no see!'),
-(131, 7, 'good morning', 'dog.mp3', 'vocab.jpg', 'A greeting used in the morning.', 'Chào buổi sáng', 'Good morning, everyone!'),
-(132, 8, 'good afternoon', 'dog.mp3', 'vocab.jpg', 'A greeting used in the afternoon.', 'Chào buổi chiều', 'Good afternoon! How was your day?'),
-(133, 8, 'good evening', 'dog.mp3', 'vocab.jpg', 'A greeting used in the evening.', 'Chào buổi tối', 'Good evening, nice to meet you!'),
-(134, 9, 'goodbye', 'dog.mp3', 'vocab.jpg', 'A word used to say farewell.', 'Tạm biệt', 'Goodbye, see you tomorrow!'),
-(135, 9, 'see you', 'dog.mp3', 'vocab.jpg', 'An informal way to say goodbye.', 'Hẹn gặp lại', 'See you next week!');
+(136, 25, 'hello', 'dog.mp3', 'vocab.jpg', 'A common greeting used to say hi.', 'Xin chào', 'Hello! How are you?'),
+(137, 25, 'hi', 'dog.mp3', 'vocab.jpg', 'An informal greeting.', 'Chào', 'Hi! Long time no see!'),
+(138, 25, 'good morning', 'dog.mp3', 'vocab.jpg', 'A greeting used in the morning.', 'Chào buổi sáng', 'Good morning, everyone!'),
+(139, 8, 'good afternoon', 'dog.mp3', 'vocab.jpg', 'A greeting used in the afternoon.', 'Chào buổi chiều', 'Good afternoon! How was your day?'),
+(140, 8, 'good evening', 'dog.mp3', 'vocab.jpg', 'A greeting used in the evening.', 'Chào buổi tối', 'Good evening, nice to meet you!'),
+(141, 9, 'goodbye', 'dog.mp3', 'vocab.jpg', 'A word used to say farewell.', 'Tạm biệt', 'Goodbye, see you tomorrow!'),
+(142, 9, 'see you', 'dog.mp3', 'vocab.jpg', 'An informal way to say goodbye.', 'Hẹn gặp lại', 'See you next week!');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -388,13 +390,13 @@ ALTER TABLE `vocabularies`
 -- AUTO_INCREMENT cho bảng `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT cho bảng `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `grammars`
@@ -406,43 +408,43 @@ ALTER TABLE `grammars`
 -- AUTO_INCREMENT cho bảng `languages`
 --
 ALTER TABLE `languages`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `lessons`
 --
 ALTER TABLE `lessons`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT cho bảng `progress`
 --
 ALTER TABLE `progress`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `vocabstatus`
 --
 ALTER TABLE `vocabstatus`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT cho bảng `vocabularies`
 --
 ALTER TABLE `vocabularies`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

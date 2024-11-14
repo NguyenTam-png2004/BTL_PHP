@@ -25,7 +25,7 @@ class HomeController extends BaseController{
     }
 
     public function getProgressCourse(){
-      $progressData =$this->UserManager->getProgress($_SESSION['account'], 'ID',$this->IDCourseCurr);
+      $progressData =$this->UserManager->getProgress($_SESSION['account'], 'ID',$this->getCourseCurrent()->ID);
       if (!$progressData){
         return 0;
       }

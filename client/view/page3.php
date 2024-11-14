@@ -75,8 +75,6 @@
         <h2 class="quiz-title">Câu hỏi số: <?php echo $ques?></h2>
         <p class="quiz-question"> <?php echo $question->question?></p>
         <p class="instruction">Chọn đáp án đúng</p>
-        <?php print_r($_SESSION['strong']); ?>
-        <?php print_r($_SESSION['weak']); ?>
         <form action="" method="POST" id="studyForm" >
         <input type="hidden" id="question_id" name="question_id" value="<?php echo $question->ID?>">
         <input type="hidden" id="ques" name="ques" value="<?php echo $ques?>">

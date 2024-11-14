@@ -34,7 +34,6 @@
             <div class="sentence">
                 <audio controls><source src="assets/image_hocngoaingu/<?php echo $vocabulary->sound?>"></audio><br><br><br>      
                 <input type="hidden" id="ques" name="ques" value="<?php echo $ques?>">
-                <?php print_r($_SESSION['listID'])?>
                 <input type="hidden" id="ID_vocab" name="ID_vocab" value="<?php echo $vocabulary->ID?>">
                 <input type="text" placeholder="..." id="user_answer" name = "user_answer" required>
             </div>

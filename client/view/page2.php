@@ -34,8 +34,6 @@
         <div class="image-container">
             <img src="assets/image_hocngoaingu/<?php echo $imageVocab?>" alt="Placeholder Image">
         </div>
-        <?php print_r($_SESSION['strong']); ?>
-        <?php print_r($_SESSION['weak']); ?>
         <form id="studyForm" method="POST" action="">
             <div class="sentence">
                 <?php echo $question->question?> <br><br>

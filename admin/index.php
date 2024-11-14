@@ -382,8 +382,7 @@ if (isset($_GET['act'])) {
       include './answer_question/list_answer_question.php';
       break;
 
-    case 'add_answer_question':
-
+    case 'add_answer_question': 
       include './answer_question/add_answer_question.php';
       break;
     case 'delete_answer_question':
@@ -394,7 +393,6 @@ if (isset($_GET['act'])) {
       include './answer_question/list_answer_question.php';
       break;
     case 'update_answer_question':
-
       include './answer_question/update_answer_question.php';
       break;
     case 'list_ngonngu':

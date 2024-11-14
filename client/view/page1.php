@@ -12,7 +12,6 @@
             <h1 class="vocab-word"><?php echo $vocabulary->vocabulary?></h1>
             <audio controls><source src="assets/image_hocngoaingu/<?php echo $vocabulary->sound?>"></audio>        
         </div>
-        <?php print_r($_SESSION['listID']);?>
             <p class="definition"><?php echo $vocabulary->description?></p>
             <p class="example"><?php echo $vocabulary->example;?></p>
         </div>

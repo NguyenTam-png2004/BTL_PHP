@@ -8,14 +8,17 @@
               <label for="">ID</label>
               <input disabled name="product_id" type="text" class="form-control">
             </div>  -->
+            <div class="form-group">
+                <p>câu hỏi </p>
+                </div>
                     <div class="form-group">
-                        <label for="">Nội dung câu hỏi</label>
+                        <label for="">Nội dung câu trả lời </label>
                         <input name="product_name" type="text" class="form-control" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="">Nội dung câu trả lời</label>
-                        <input name="mo_ta" type="text" class="form-control" required>
+                        <label for="">trả lời đúng</label>
+                        <input name="isCorrect" type="text" class="form-control" required>
                     </div>
 
 

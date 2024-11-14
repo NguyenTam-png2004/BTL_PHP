@@ -33,6 +33,9 @@ td {
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Answer_Question</h4>
+                <div class="thaotac">
+              <a href="index.php?act=add_answer_question"><input class="btn btn-gradient-primary" type="button" value="Thêm câu trả lời"></a>
+            </div>
                 <div class="table-responsive">
                     <table class="table text-center table-bordered table1">
                         <thead>
@@ -49,6 +52,7 @@ td {
                             foreach ($listanswers as $baihoc) {
                                 extract($baihoc);
                                 $xoasp = "index.php?act=delete_answer_question&ID=" . $ID;
+                                $suasp = "index.php?act=update_answer_question&ID=" . $ID;
                                 echo '<tr>
                 <td>' . $i . '</td>
                 <td>' . $question . '</td>
@@ -56,6 +60,7 @@ td {
               
                 <td class="btn1">
                   <a href="' . $xoasp . '"><input class="btn btn-gradient-danger btn2" type="button" value="Xóa"></a>
+                  <a href="' . $suasp . '"><input class="btn btn-gradient-danger btn2" type="button" value="Sửa"></a>
                 </td>
               </tr>';
                             }
